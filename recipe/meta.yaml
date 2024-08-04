@@ -1,6 +1,5 @@
 {% set version = '1.0-3' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-stratifyr
@@ -13,8 +12,7 @@ source:
   sha256: 588397c155d68426e8f4f652adb7ca7bd37fcee0d2bf834fc63920d0a1d777cd
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
