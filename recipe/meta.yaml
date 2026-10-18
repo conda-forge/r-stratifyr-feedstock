@@ -1,15 +1,15 @@
-{% set version = "2.0-1" %}
+{% set version = "2.0-3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-stratifyr
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/stratifyR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stratifyR/stratifyR_{{ version }}.tar.gz
-  sha256: afcbb1bb6cfcbc116ea653940aba5acca438bf444362b4b23c0d8fe52c9df6e2
+  sha256: 8437c552d934661f5f61e1ee79604c46dbeac9a2a3d2fbc2ba326d2bb051c715
 
 build:
   number: 0
